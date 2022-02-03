@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Make Up Catalog</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Make Up Catalog</h1>
+    </header>
+    <main>
+      <form class="catalog-control">
+        <div class="form-control">
+          <label for="filter-name">Nome:</label>
+          <input type="text" id="filter-name" onchange="search();" />
+        </div>
+        <div class="form-control">
+          <label for="filter-brand">Marca:</label>
+          <select id="filter-brand" onchange="search();">
+            <option value="">Todos</option>
+          </select>
+        </div>
+        <div class="form-control">
+          <label for="filter-type">Tipo:</label>
+          <select id="filter-type" onchange="search();">
+            <option value="">Todos</option>
+          </select>
+        </div>
+        <div class="form-control">
+          <label for="sort"></label>
+          <select id="sort-type" onchange="search();">
+            <option value="0">Melhor Avaliados</option>
+            <option value="1">Menores Preços</option>
+            <option value="2">Maiores Preços</option>
+            <option value="3">A-Z</option>
+            <option value="4">Z-A</option>
+          </select>
+        </div>
+      </form>
+      <section class="catalog" id="catalog"></section>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>
